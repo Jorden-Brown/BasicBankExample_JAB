@@ -2,6 +2,8 @@ package com.jordenbrown.basicbank.JAB_BANK.accounts.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -15,7 +17,7 @@ public class Account {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int ID; 
 	
-	@Column(columnDefinition="AccountNumber")
+	@Column(name="AccountNumber")
 	private String accountNumber;
 	private float funds; 
 	private int ownerID;

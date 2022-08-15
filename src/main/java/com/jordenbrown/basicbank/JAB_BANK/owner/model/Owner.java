@@ -25,12 +25,17 @@ public class Owner {
 	
 	public Owner() {}
 	
-	public Owner(String firstName, String middleName, String lastName) {
+	private Owner(int ID, String firstName, String middleName, String lastName) {
 		this.firstName = firstName; 
 		this.middleName = middleName; 
 		this.lastName = lastName; 
 	}
 
+    static Owner from(int ID, String firstName, String middleName, String lastName) {
+        return new Owner(ID, firstName, middleName, lastName);
+    }
+
+	
 	public int getID() {
 		return ID;
 	}
